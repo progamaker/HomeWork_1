@@ -65,6 +65,31 @@ jobs:
             pytest "$d" -q || exit 1
           done
 
+  hw1-photolab:
+    # Те же 11 тестов, что в template/.github ДЗ 1, — GitHub запускает только корневой .github
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: homeworks/hw1-photolab/solution
+    env:
+      MPLBACKEND: Agg
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Установка зависимостей
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Версия OpenCV
+        run: python -c "import cv2; assert cv2.__version__ == '4.14.0', cv2.__version__; print(cv2.__version__)"
+      - name: Тесты
+        run: pytest tests -q
+
   decks:
     runs-on: ubuntu-latest
     steps:

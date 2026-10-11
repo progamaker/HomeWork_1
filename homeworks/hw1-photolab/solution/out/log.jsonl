@@ -1,0 +1,42 @@
+
++ python3 /Users/nikita/iu-intro-cv/homeworks/hw1-photolab/solution/photolab.py gamma data/dark.jpg --gamma 0.5 -o out/dark_g05.jpg --hist out/dark_g05_hist.png
+{"command": "gamma", "gamma": 0.5, "before": {"mean": 115.3, "p1": 2, "median": 118, "p99": 230, "clipped_black_pct": 0.1, "clipped_white_pct": 0.01}, "after": {"mean": 161.1, "p1": 23, "median": 173, "p99": 243, "clipped_black_pct": 0.04, "clipped_white_pct": 0.01}, "out": "out/dark_g05.jpg"}
+
++ python3 /Users/nikita/iu-intro-cv/homeworks/hw1-photolab/solution/photolab.py gamma data/dark.jpg --gamma 2.0 -o out/dark_g20.jpg --hist out/dark_g20_hist.png
+{"command": "gamma", "gamma": 2.0, "before": {"mean": 115.3, "p1": 2, "median": 118, "p99": 230, "clipped_black_pct": 0.1, "clipped_white_pct": 0.01}, "after": {"mean": 69.9, "p1": 0, "median": 55, "p99": 208, "clipped_black_pct": 5.11, "clipped_white_pct": 0.01}, "out": "out/dark_g20.jpg"}
+
++ python3 /Users/nikita/iu-intro-cv/homeworks/hw1-photolab/solution/photolab.py wb data/bright.jpg --method grey-world -o out/bright_gw.jpg --hist out/bright_gw_hist.png
+{"command": "wb", "method": "grey-world", "gains_bgr": [1.5, 0.889, 0.827], "means_before_bgr": [94.9, 159.7, 172.4], "means_after_bgr": [141.3, 142.0, 142.7], "out": "out/bright_gw.jpg"}
+
++ python3 /Users/nikita/iu-intro-cv/homeworks/hw1-photolab/solution/photolab.py wb data/bright.jpg --method white-patch -o out/bright_wp.jpg --hist out/bright_wp_hist.png
+{"command": "wb", "method": "white-patch", "gains_bgr": [1.209, 1.09, 1.024], "means_before_bgr": [94.9, 159.7, 172.4], "means_after_bgr": [114.6, 173.9, 176.7], "out": "out/bright_wp.jpg"}
+
++ python3 /Users/nikita/iu-intro-cv/homeworks/hw1-photolab/solution/experiments.py wb-reference data/bright.jpg
+{"experiment": "wb-reference", "image": "data/bright.jpg", "reference_pct": 0.34, "colored_pct": 36.2, "methods": {"исходник": {"reference_bgr": [209, 238, 243], "spread": 34.2}, "grey-world": {"gains_bgr": [1.5, 0.889, 0.827], "reference_bgr": [255, 211, 201], "spread": 53.7, "frame_spread": 1.4, "blue_clipped_pct": 100.0}, "white-patch": {"gains_bgr": [1.209, 1.09, 1.024], "reference_bgr": [247, 254, 249], "spread": 7.6, "frame_spread": 62.1, "blue_clipped_pct": 42.5}}}
+
++ python3 /Users/nikita/iu-intro-cv/homeworks/hw1-photolab/solution/photolab.py clahe data/dark.jpg --clip 2 --tiles 8 -o out/dark_clahe.jpg --compare out/dark_cmp.jpg --hist out/dark_clahe_hist.png
+{"command": "clahe", "clip": 2.0, "tiles": 8, "local_contrast": {"исходный": {"shadow_std": 12.0, "shadow_mean": 16.9, "light_mean": 213.2, "light_std": 13.6}, "equalizeHist": {"shadow_std": 14.4, "shadow_mean": 26.4, "light_mean": 229.9, "light_std": 14.7}, "CLAHE": {"shadow_std": 20.0, "shadow_mean": 30.2, "light_mean": 203.5, "light_std": 17.9}}, "out": "out/dark_clahe.jpg"}
+
++ python3 /Users/nikita/iu-intro-cv/homeworks/hw1-photolab/solution/photolab.py chromakey data/object.jpg --bg data/bg.jpg --sample 743,902,60,60 -o out/object_on_bg.jpg --mask out/object_mask.png
+{"command": "chromakey", "lo": [0, 86, 40], "hi": [179, 255, 255], "components": 18, "area": 14264, "bbox": [633, 1001, 185, 130], "centroid": [724.1, 1064.9], "raw_components": 70, "holes": 0, "mask_pct": 0.48, "out": "out/object_on_bg.jpg"}
+
++ python3 /Users/nikita/iu-intro-cv/homeworks/hw1-photolab/solution/photolab.py rotate data/poster.jpg --deg 30 -o out/poster_rot30.jpg
+{"command": "rotate", "deg": 30.0, "size_in": [1500, 2000], "size_out": [2299, 2482], "canvas_empty_pct": 47.4, "out": "out/poster_rot30.jpg"}
+
++ python3 /Users/nikita/iu-intro-cv/homeworks/hw1-photolab/solution/photolab.py rotate data/poster.jpg --deg -137 -o out/poster_rotm137.jpg
+{"command": "rotate", "deg": -137.0, "size_in": [1500, 2000], "size_out": [2461, 2486], "canvas_empty_pct": 51.0, "out": "out/poster_rotm137.jpg"}
+
++ python3 /Users/nikita/iu-intro-cv/homeworks/hw1-photolab/solution/photolab.py resize data/text.jpg --scale 0.25 --report -o out/text_x025.jpg
+{"command": "resize", "scale": 0.25, "method": "area", "size_out": [375, 500], "out": "out/text_x025.jpg", "psnr_vs_lanczos_db": {"naive": 25.4, "blur": 31.7, "area": 33.0}}
+
++ python3 /Users/nikita/iu-intro-cv/homeworks/hw1-photolab/solution/photolab.py resize data/text.jpg --scale 2 -o out/text_x2.jpg
+{"command": "resize", "scale": 2.0, "method": "area", "size_out": [3000, 4000], "out": "out/text_x2.jpg"}
+
++ python3 /Users/nikita/iu-intro-cv/homeworks/hw1-photolab/solution/photolab.py rectify data/poster.jpg --corners 531,412,1211,430,1022,1503,211,1329 --aspect 0.705 -o out/poster_front.jpg
+{"command": "rectify", "corners_ordered": [[531.0, 412.0], [1211.0, 430.0], [1022.0, 1503.0], [211.0, 1329.0]], "sides_px": {"top": 680.2, "right": 1089.5, "bottom": 829.5, "left": 971.2}, "size_out": [829, 1176], "aspect_out": 0.705, "out": "out/poster_front.jpg"}
+
++ python3 /Users/nikita/iu-intro-cv/homeworks/hw1-photolab/solution/experiments.py aspect data/poster.jpg --corners 531,412,1211,430,1022,1503,211,1329 --long-mm 230
+{"experiment": "aspect", "image": "data/poster.jpg", "sides_px": {"top": 680.2, "bottom": 829.5, "left": 971.2, "right": 1089.5}, "aspect_by_sides": 0.761, "aspect_from_perspective": 0.705, "focal_px": 1742, "error_of_sides_pct": 8.0, "cover_mm": [162, 230.0]}
+
++ python3 /Users/nikita/iu-intro-cv/homeworks/hw1-photolab/solution/photolab.py sheet data/bg.jpg data/bright.jpg data/dark.jpg data/object.jpg data/poster.jpg data/text.jpg out/dark_g05.jpg out/bright_gw.jpg out/object_on_bg.jpg out/poster_front.jpg --cols 4 -o out/sheet.jpg
+{"command": "sheet", "n": 10, "cols": 4, "size_out": [1320, 830], "out": "out/sheet.jpg"}

@@ -4,11 +4,19 @@ __pycache__/
 .venv/
 .ipynb_checkpoints/
 .pytest_cache/
+.DS_Store
+.idea/
 # данные не коммитятся — только data/README.md с тем, что скачать
 **/data/*
 !**/data/README.md
+# исключение: кадры эталонного решения ДЗ 1 — без них REPORT.md не перепроверить
+!homeworks/hw1-photolab/solution/data/**
 *.pptx
 out/
+# исключение: out/ ДЗ 1 сдаётся вместе с решением (README ДЗ, §1)
+!homeworks/hw1-photolab/solution/out/
+# результаты эталонного прогона: 12 МБ, пересоздаются `solution/run_all.sh --course`
+out-course/
 
 # Материалы ассистента живут в iu-intro-cv-ta и в публичный не попадают.
 labs/_template/

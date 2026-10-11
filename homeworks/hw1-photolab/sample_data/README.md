@@ -57,6 +57,8 @@ Recall и precision команда не печатает — эталон ест
 ```
 python photolab.py rotate IU --deg 30 -o out/rot30.jpg
   1920 × 1279 → 2302 × 2068, пустого холста 48.4 %                    (слайд 19 L4)
+python photolab.py rotate IU --deg -137 -o out/rotm137.jpg
+  1920 × 1279 → 2276 × 2245, пустого холста 51.9 %      (контроль знака: рубрика A требует и −137°)
 
 python photolab.py resize IU --scale 0.25 --report -o out/small.jpg
   480 × 320; PSNR к Lanczos: naive 27.9 дБ · blur 36.0 · area 37.2     (демо 2.4 L4: 27.9 / 36.7 при σ 1.5 / 37.2)
