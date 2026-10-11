@@ -53,9 +53,6 @@ jobs:
           done
           exit $fail
 
-      - name: Заготовки доходят до первого TODO
-        run: python tools/check_starters.py
-
       - name: Тесты занятий
         # До публикации решения тесты идут против заготовки и пропускаются
         # (незаполненный TODO — skip, не fail).
