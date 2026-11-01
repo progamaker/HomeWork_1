@@ -1,0 +1,72 @@
+[
+  {
+    "attachment": 1,
+    "file": "01.jpg",
+    "source": "codex-clipboard-b2dc8530-fd6a-4d61-8fab-a1bac961084a.jpg",
+    "sheet": false,
+    "sha256": "0847dd9ba2e95aeb098f352a22893fa38ce4c54e73033a931d2744f7c87d5e01"
+  },
+  {
+    "attachment": 2,
+    "file": "02.jpg",
+    "source": "codex-clipboard-daf11af3-96f4-4431-8eef-d5c3f9e02f11.jpg",
+    "sheet": false,
+    "sha256": "d9b38f85ff18c89cee5c11f324e13e752f7a38426bf48bdba2a6facf78f761e5"
+  },
+  {
+    "attachment": 3,
+    "file": "03.jpg",
+    "source": "codex-clipboard-92079dcb-035b-4fa5-a8bf-1139bcde7bc7.jpg",
+    "sheet": false,
+    "sha256": "516c7e95980875217b500026c330b202f79a3af042da6d9980f153a6368d12c5"
+  },
+  {
+    "attachment": 4,
+    "file": "04.jpg",
+    "source": "codex-clipboard-be15fbf3-0a08-4721-bfbd-92594f37f11a.jpg",
+    "sheet": false,
+    "sha256": "9693275618f66db5a900b1ea31ac02b0dddf9ae9412fad21f9a06a53f8a5b958"
+  },
+  {
+    "attachment": 5,
+    "file": "05.jpg",
+    "source": "codex-clipboard-ed9ad784-ebd3-4ee9-a618-63978dc9e2e0.jpg",
+    "sheet": false,
+    "sha256": "82a0781a915a1a874a9ec2562c97163d394ee2748460ad0ee91850c62b2082e8"
+  },
+  {
+    "attachment": 6,
+    "file": "06.jpg",
+    "source": "codex-clipboard-f037855a-1b1b-4cbd-a54e-c5d12f08ebbe.jpg",
+    "sheet": false,
+    "sha256": "9d47c78cf0d2a1a45c1b744fafe5ba2210a323fd3f78cd7943ddd5740a1e03ac"
+  },
+  {
+    "attachment": 7,
+    "file": "07.jpg",
+    "source": "codex-clipboard-6160090b-df39-4e45-9dfd-cae0517bcc12.jpg",
+    "sheet": false,
+    "sha256": "2ace23c76fe9b1ab1c35730910a70413be0f9325ef572d214ce67b55825839bf"
+  },
+  {
+    "attachment": 8,
+    "file": "08.jpg",
+    "source": "codex-clipboard-ada8998d-a47e-483a-a0aa-fdd3d1c1fac7.jpg",
+    "sheet": false,
+    "sha256": "2e79c69ec3d67a52b532adb9b85581ad0c76409ac487b4ed1896b0e3ba97e507"
+  },
+  {
+    "attachment": 9,
+    "file": "09.jpg",
+    "source": "codex-clipboard-f49c243e-aa73-4f60-8e67-6d837dab6027.jpg",
+    "sheet": false,
+    "sha256": "848775e465db5a6ea27b29fb17640d7693bb807335ba1062cfdcd493f4c0e1d6"
+  },
+  {
+    "attachment": 10,
+    "file": "10.jpg",
+    "source": "codex-clipboard-682f0d41-3fce-4707-a1b0-803f150a84b8.jpg",
+    "sheet": false,
+    "sha256": "f6d3bff49250c2d444b0f97dbd5176f1c13a342a9de25336734c8968e78c385f"
+  }
+]
