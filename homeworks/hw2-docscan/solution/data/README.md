@@ -1,28 +1,7 @@
-# Распределение фотографий по позициям
+# Dataset for supplementary evaluation
 
-По просьбе пользователя заполнены все 18 позиций существующими фотографиями, с повторами. Новые изображения не генерировались и не добавлялись.
+18 separate images: 01–15 contain an illustrated sheet of paper; 16–18 are negative scenes. Images are synthetic/illustrative, not independent camera photographs, and most positive sheets are blank rather than printed A4 pages.
 
-**Это раскладка с заглушками, а не набор из 15 кадров с листом и 3 негативов.** На всех исходных фотографиях отдельный лист с текстом не виден. Поэтому в `corners.json` везде `null`; нельзя считать заглушки позитивными кадрами или измерять на них качество поиска листа. Категория ниже означает назначение позиции, а не содержание фотографии.
+`corners.json` contains **approximate manual corner estimates** from the small (246×331) images. The sheet is partially cropped in 01, 08 and 10, so those polygons are approximate visible-page proxies, not verified ground truth. These estimates must not be presented as accurate human-clicked annotations of physical A4 sheets.
 
-| Файл | Категория позиции | № исходного фото | Статус |
-|---|---|---|---|
-| 01.jpg | Тёмный фон, прямо | 1 | Заглушка: листа нет |
-| 02.jpg | Тёмный фон, наклон | 2 | Заглушка: листа нет |
-| 03.jpg | Тёмный фон, сильный наклон | 3 | Заглушка: листа нет |
-| 04.jpg | Полумрак, поворот | 8 | Заглушка: листа нет |
-| 05.jpg | Закрытый угол | 7 | Заглушка: листа нет |
-| 06.jpg | Светлый стол, прямо | 4 | Заглушка: листа нет |
-| 07.jpg | Светлый стол, боковой свет | 5 | Заглушка: листа нет |
-| 08.jpg | Светлый стол, наклон | 6 | Заглушка: листа нет |
-| 09.jpg | Светлый фон, поворот | 9 | Заглушка: листа нет |
-| 10.jpg | Ручка через границу листа | 10 | Заглушка: листа нет |
-| 11.jpg | Пёстрый фон, прямо | 7 | Заглушка: листа нет; повтор 05.jpg |
-| 12.jpg | Пёстрый фон, боковой свет | 1 | Заглушка: листа нет; повтор 01.jpg |
-| 13.jpg | Пёстрый фон, полумрак | 8 | Заглушка: листа нет; повтор 04.jpg |
-| 14.jpg | Пёстрый фон, поворот | 2 | Заглушка: листа нет; повтор 02.jpg |
-| 15.jpg | Загнутый угол | 3 | Заглушка: листа нет; повтор 03.jpg |
-| 16.jpg | Ноутбук вместо листа | 4 | Подходящий негатив; повтор 06.jpg |
-| 17.jpg | Лист двумя углами вне кадра | 6 | Заглушка: листа нет; повтор 08.jpg |
-| 18.jpg | Белый лист на белом фоне | 10 | Заглушка: листа нет; повтор 10.jpg |
-
-В наборе 10 уникальных исходных фотографий и 8 повторов. Реальные исходники и результаты их проверки находятся в `../extra_data/negatives/` и `../out/received_negatives_eval.csv`. Повторы не являются независимыми наблюдениями.
+Use this dataset for a supplementary smoke test only. The course requirement for 18 original photographs of printed A4 pages, controlled lighting and webcam footage remains open.
